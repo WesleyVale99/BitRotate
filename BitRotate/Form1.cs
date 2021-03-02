@@ -42,15 +42,15 @@ namespace BitRotate
             byte[] data = File.ReadAllBytes(txtPath.Text);
             if (data.Length > 0)
             {
-                for (var i = 0; i < data.Length; i += 2048)
+                for (var i = 0; i < data.Length; i++)
                 {
                     if (chkBoxEnc.Checked)
                     {
-                        Shift.Encrypt(data, i, 2048, int.Parse(txtShift.Text));
+                        Shift.BitRotateEncript(data, i, int.Parse(txtShift.Text));
                     }
                     else if (chkBoxDec.Checked)
                     {
-                        Shift.Decrypt(data, i, 2048, int.Parse(txtShift.Text));
+                        Shift.BitRotateDecript(data, i, int.Parse(txtShift.Text));
                     }
                 }
                 SaveFile(data);
