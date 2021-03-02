@@ -48,7 +48,7 @@ namespace BitRotate
                     {
                         Shift.BitRotateEncript(data, i, int.Parse(txtShift.Text));
                     }
-                    else if (chkBoxDec.Checked)
+                    if (chkBoxDec.Checked)
                     {
                         Shift.BitRotateDecript(data, i, int.Parse(txtShift.Text));
                     }
