@@ -9,9 +9,9 @@ namespace BitRotate.FileNetwork
 {
    public class Shift
     {
-        [DllImport(@"System\i3BaseDx.dll", EntryPoint = "?BitRotateDecript@@YAXPAEII@Z")]
+        [DllImport("i3BaseDx.dll", EntryPoint = "?BitRotateDecript@@YAXPAEII@Z")]
         public static extern void BitRotateDecript(byte[] from, int length, int shift);
-        [DllImport(@"System\i3BaseDx.dll", EntryPoint = "?BitRotateEncrypt@@YAXPAEII@Z")]
+        [DllImport("i3BaseDx.dll", EntryPoint = "?BitRotateEncrypt@@YAXPAEII@Z")]
         public static extern void BitRotateEncript(byte[] from, int length, int shift);
     }
 }
